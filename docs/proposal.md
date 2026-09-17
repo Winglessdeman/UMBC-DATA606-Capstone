@@ -34,17 +34,17 @@ For the final Streamlit application, I would design it as a simple glycemic-risk
 ### What are your research questions?
 
 #### Research Question 1
-**Can non-laboratory demographic, Biometric, behavioral, cardiovascular, and socioeconomic characteristics be used to identify elevated HbA1c among adults without a previously reported diabetes diagnosis?**
+Can non-laboratory demographic, Biometric, behavioral, cardiovascular, and socioeconomic characteristics be used to identify elevated HbA1c among adults without a previously reported diabetes diagnosis?
 
 
 #### Research Question 2
-**Which non-laboratory characteristics are most important for identifying elevated HbA1c?**
+Which non-laboratory characteristics are most important for identifying elevated HbA1c?
 
 #### Research Question 3
-**Do behavioral and socioeconomic characteristics improve the prediction of elevated HbA1c beyond basic factors such as age and BMI?**
+Do behavioral and socioeconomic characteristics improve the prediction of elevated HbA1c beyond basic factors such as age and BMI?
 
 #### Research Question 4
-**Can elevated HbA1c be identified among adults who are not obese?**
+Can elevated HbA1c be identified among adults who are not obese?
 
 # 3. Data
 
@@ -107,29 +107,42 @@ It includes four continuous pre-pandemic NHANES survey cycles.
 | `SLQ` | Sleep Disorders | Usual sleep duration |
 | `BPQ` | Blood Pressure & Cholesterol Questionnaire | Self-reported hypertension and high cholesterol |
 
-### Data dictionary:
+### Data Dictionary
 
-| Column                               | Type        | Definition                             | Potential Values / Units       | Role               |
-| ------------------------------------ | ----------- | -------------------------------------- | ------------------------------ | ------------------ |
-| `age`                                | Numeric     | Participant age                        | Years, 20–80 in primary sample | Predictor          |
-| `sex`                                | Categorical | Participant sex                        | NHANES coded categories        | Predictor          |
-| `race_ethnicity`                     | Categorical | Race/Hispanic origin                   | NHANES coded categories        | Predictor          |
-| `education`                          | Categorical | Adult educational attainment           | NHANES education categories    | Predictor          |
-| `income_poverty_ratio`               | Numeric     | Family income-to-poverty ratio         | 0–5                            | Predictor          |
-| `hba1c`                              | Numeric     | Laboratory HbA1c                       | Percent                        | Target source      |
-| `bmi`                                | Numeric     | Body Mass Index                        | kg/m²                          | Predictor          |
-| `waist_cm`                           | Numeric     | Waist circumference                    | cm                             | Predictor          |
-| `weight_kg`                          | Numeric     | Body weight                            | kg                             | Possible predictor |
-| `diabetes_report`                    | Categorical | Self-reported diabetes diagnosis       | 1 Yes, 2 No, 3 Borderline      | Eligibility        |
-| `vigorous_minutes_week`              | Numeric     | Derived vigorous recreational activity | Minutes/week                   | Predictor          |
-| `moderate_minutes_week`              | Numeric     | Derived moderate recreational activity | Minutes/week                   | Predictor          |
-| `recreational_activity_minutes_week` | Numeric     | Total recreational activity            | Minutes/week                   | Predictor          |
-| `sedentary_minutes`                  | Numeric     | Sedentary time                         | Minutes/day                    | Predictor          |
-| `smoking_status`                     | Categorical | Derived smoking status                 | Never, Former, Current         | Predictor          |
-| `sleep_hours`                        | Numeric     | Weekday/workday sleep duration         | Hours                          | Predictor          |
-| `hypertension`                       | Categorical | Reported hypertension                  | Yes/No                         | Predictor          |
-| `high_cholesterol`                   | Categorical | Reported high cholesterol              | Yes/No                         | Predictor          |
-
+| Column | Type | Definition | Potential Values / Units | Role |
+|---|---|---|---|---|
+| `SEQN` | Numeric ID | Unique NHANES participant identifier | Unique respondent sequence number | Merge key / ID |
+| `age` | Numeric | Participant age | Years; 20–80 in primary analysis population | Predictor / eligibility |
+| `sex` | Categorical | Participant sex | NHANES coded categories | Predictor |
+| `race_ethnicity` | Categorical | Participant race/ethnicity | NHANES coded categories | Predictor |
+| `education` | Categorical | Adult educational attainment | NHANES education categories | Predictor |
+| `income_poverty_ratio` | Numeric | Family income-to-poverty ratio | 0–5 | Predictor |
+| `mec_weight` | Numeric | NHANES 2-year Mobile Examination Center survey weight | Survey weight | Survey analysis |
+| `psu` | Categorical / Survey Design | Masked variance pseudo-primary sampling unit | NHANES survey-design codes | Survey analysis |
+| `stratum` | Categorical / Survey Design | Masked variance pseudo-stratum | NHANES survey-design codes | Survey analysis |
+| `cycle` | Categorical | NHANES survey cycle in which the participant was examined | 2011–2012, 2013–2014, 2015–2016, 2017–2018 | Tracking / analysis |
+| `hba1c` | Numeric | Laboratory-measured glycated hemoglobin (HbA1c) | Percent (%) | Target source |
+| `elevated_hba1c` | Binary | Derived machine-learning target based on HbA1c | 0 = HbA1c < 5.7%; 1 = HbA1c ≥ 5.7% | ML target |
+| `bmi` | Numeric | Body Mass Index | kg/m² | Predictor |
+| `waist_cm` | Numeric | Waist circumference | Centimeters (cm) | Predictor |
+| `weight_kg` | Numeric | Body weight | Kilograms (kg) | Possible predictor |
+| `diabetes_report` | Categorical | Self-reported previous diabetes diagnosis | 1 = Yes, 2 = No, 3 = Borderline | Eligibility filter |
+| `vigorous_activity` | Categorical | Whether participant reports vigorous recreational activity | Yes / No | Intermediate activity variable |
+| `vigorous_days` | Numeric | Number of days per week of vigorous recreational activity | Days/week | Feature engineering |
+| `vigorous_minutes` | Numeric | Minutes of vigorous activity on a typical active day | Minutes/day | Feature engineering |
+| `vigorous_minutes_week` | Numeric | Derived total vigorous recreational activity per week | Minutes/week | Predictor |
+| `moderate_activity` | Categorical | Whether participant reports moderate recreational activity | Yes / No | Intermediate activity variable |
+| `moderate_days` | Numeric | Number of days per week of moderate recreational activity | Days/week | Feature engineering |
+| `moderate_minutes` | Numeric | Minutes of moderate activity on a typical active day | Minutes/day | Feature engineering |
+| `moderate_minutes_week` | Numeric | Derived total moderate recreational activity per week | Minutes/week | Predictor |
+| `recreational_activity_minutes_week` | Numeric | Derived total vigorous and moderate recreational activity | Minutes/week | Predictor |
+| `sedentary_minutes` | Numeric | Time spent sitting or reclining on a typical day | Minutes/day | Predictor |
+| `smoked_100_cigarettes` | Categorical | Whether participant has smoked at least 100 cigarettes during their lifetime | Yes / No | Smoking feature engineering |
+| `current_smoking` | Categorical | Current cigarette-smoking behavior among eligible participants | Every day, Some days, Not at all | Smoking feature engineering |
+| `smoking_status` | Categorical | Derived overall smoking status using lifetime and current smoking responses | Never, Former, Current | Predictor |
+| `sleep_hours` | Numeric | Usual weekday/workday sleep duration | Hours | Predictor |
+| `hypertension` | Categorical | Whether participant reports being told they have hypertension/high blood pressure | Yes / No | Predictor |
+| `high_cholesterol` | Categorical | Whether participant reports being told they have high cholesterol | Yes / No | Predictor |
 
 ### Target/label:
 The machine-learning target will be derived from:
