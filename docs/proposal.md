@@ -1,6 +1,6 @@
 # Identifying Hidden Glycemic Risk using Machine Learning: An Analysis of U.S. Adults without diagnosed diabetes. 
 
-- **Prepared for:** UMBC Data Science Master Degree Capstone by Dr. Chaojie (Jay) Wang 
+- **Prepared for:** UMBC Data Science Master Degree Capstone, Dr. Chaojie (Jay) Wang 
 - **Author**: Shristi Pokharel
 - **GitHub repository**: https://github.com/winglessdeman/UMBC-DATA606-Capstone
 - **LinkedIn:** 
