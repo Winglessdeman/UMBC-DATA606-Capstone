@@ -1,7 +1,18 @@
-streamlit==1.51.0
-scikit-learn==1.9.1
+# Data manipulation and numerical computing
 pandas==2.3.3
 numpy==2.3.4
 scipy==1.17.1
+
+# Machine learning and model serialization
+scikit-learn==1.9.1
 joblib==1.6.0
+
+# Data visualization
 matplotlib==3.10.7
+
+# Application development
+streamlit==1.51.0
+
+# Jupyter notebook environment
+jupyter
+ipykernel
