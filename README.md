@@ -10,10 +10,10 @@ The analysis includes 17,156 adults and evaluates 13 non-laboratory predictors. 
 
 ## Project resources
 
-- **[Full capstone report](docs/report.md)** — project background, data, EDA, and modeling
-- **[EDA notebook](notebooks/nhanes_eda.ipynb)** — exploratory analysis and figures
-- **[Modeling notebook](notebooks/nhanes_modeling.ipynb)** — model development and evaluation
-- **[Streamlit application](https://nhanes-hba1c-screening.streamlit.app/)** — interactive educational demonstration
+- **[Project report](docs/report.md)** 
+- **[EDA notebook](notebooks/nhanes_eda.ipynb)** 
+- **[Modeling notebook](notebooks/nhanes_modeling.ipynb)** 
+- **[Streamlit application](https://nhanes-hba1c-screening.streamlit.app/)**
 - **[Final presentation](https://docs.google.com/presentation/d/1RcuCA3hMLdgMUhZl3_jZcrc8IVwGSDwQ/edit)**
 
 ## Research questions
