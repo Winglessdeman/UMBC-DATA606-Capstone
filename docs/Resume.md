@@ -1,7 +1,6 @@
 # Shristi Pokharel
 
-<img src="figures/headshot.jpg" alt="Professional Headshot" width="220" align="left">
-
+<img src="figures/headshot.jpg" alt="Professional Headshot" width="220">
 **Data Science | Computer Science | Business Management**
 
 Ellicott City, Maryland, USA
