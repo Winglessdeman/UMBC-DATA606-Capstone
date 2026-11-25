@@ -10,7 +10,6 @@ Ellicott City, Maryland, USA
 - **LinkedIn:** [Your LinkedIn Profile]
 - **GitHub:** [Winglessdeman](https://github.com/Winglessdeman)
 
----
 
 ## Professional Summary
 
