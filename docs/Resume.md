@@ -1,6 +1,6 @@
 # Shristi Pokharel
 
-<img src="figures/headshot.jpg" alt="Professional Headshot" width="160" align="left">
+<img src="figures/headshot.jpg" alt="Professional Headshot" width="180" align="left">
 
 **Data Science | Computer Science | Business Management**
 
@@ -25,7 +25,7 @@ through interactive applications and visualizations. Interested in
 opportunities that combine data analytics, technology, business strategy,
 and management.
 
----
+
 
 ## Education
 
