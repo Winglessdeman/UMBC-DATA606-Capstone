@@ -7,7 +7,7 @@
 - **Streamlit Application:** [NHANES HbA1c Screening](https://nhanes-hba1c-screening.streamlit.app/)
 - **EDA Notebook:** [nhanes_eda.ipynb](../notebooks/nhanes_eda.ipynb)
 - **Modeling Notebook:** [nhanes_modeling.ipynb](../notebooks/nhanes_modeling.ipynb)
-- **YouTube Presentation:** 
+- **YouTube Presentation:** [Capstone Presentation Video](https://youtu.be/xGb9Q9QnsKg)
 - **LinkedIn:** 
 
 ## 1. Project Overview
