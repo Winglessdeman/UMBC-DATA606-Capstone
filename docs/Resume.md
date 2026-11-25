@@ -1,15 +1,31 @@
 # Shristi Pokharel
 
-<img src="figures/headshot.jpg" alt="Professional Headshot" width="160" align="right">
+<table>
+  <tr>
+    <td valign="top" width="75%">
 
-**Data Science | Computer Science | Business Management**
+**Data Science | Computer Science | Business Management**  
 
-Ellicott City, Maryland, USA
+Ellicott City, Maryland, USA  
 
-- **Email:** [shristipokharel5@gmail.com]
-- **LinkedIn:** [Your LinkedIn Profile]
+- **Email:** [shristipokharel5@gmail.com](mailto:shristipokharel5@gmail.com)  
+- **LinkedIn:** [Your LinkedIn Profile](#)  
 - **GitHub:** [Winglessdeman](https://github.com/Winglessdeman)
 
+    </td>
+    <td valign="top" align="right" width="25%">
+      <img src="figures/headshot.png" alt="Shristi Pokharel Headshot" width="160"/>
+    </td>
+  </tr>
+</table>
+
+## Professional Summary
+
+Data Science graduate student with an academic background in Computer Science and Web Development, complemented by professional experience in business management, operations, and customer relations. Skilled in machine learning, statistical analysis, data visualization, database management, and application development.
+
+Experienced in transforming complex datasets into actionable insights, developing predictive models, and communicating analytical findings through interactive applications and visualizations. Interested in opportunities that combine data analytics, technology, business strategy, and management.
+
+## Education
 ---
 
 ## Professional Summary
